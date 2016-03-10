@@ -1,0 +1,101 @@
+---
+name: old-lister
+url: /old-lister/:id/
+
+route: /old-lister/:id/
+title: old-lister
+animationIn: slideInRight
+---
+<span class="label">Default Label</span>
+<span class="success label">Success Label</span>
+<span class="alert label">Alert Label</span>
+<span class="warning label">Warning Label</span>
+<a class="button" href="#" zf-popup-toggle="popup">Open Popup</a>
+<zf-popup id="popup" class="padding">
+	ID: {{test_result}}
+</zf-popup>
+
+<!--<div ng-controller="Add">
+
+
+  </div>-->
+
+<h2>ID: {{currentID}}</h2>
+<div class="container" id="lister">
+	<div  ng-controller="listerCtrl">
+
+		<fieldset>
+<legend>Add</legend>
+<input placeholder="name" ng-model="contactname" type="text">
+<input placeholder="number" ng-model="contactnumber" type="text">
+<button ng-click="Add()">Add</button>
+
+    XXX<ul>
+    <li ng-repeat="con in contacts">{{con.name}} {{con.number}}</li>
+    </ul>YYY
+
+    </fieldset>
+		<fieldset>
+		<!-- lists: id, list_name -->
+			<legend>/test/api/lists/ </legend>
+			<table>
+				<tr>
+					<th> id </td>
+					<th> list_name </td>
+				</tr>
+				<tr ng-repeat="x in lists">
+					<td><a href="/#/lister/{{ x.id}}/">{{ x.id }}</a></td>
+					<td>{{ x.list_name }}</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<!-- lists: id, list_name -->
+			<legend>/test/api/lists/:id/ </legend>
+			<!--<input type="text" ng-model="list_id" class="form-control" id="list_id" placeholder="1" />
+			<p ng-bind="list_id"></p>-->
+
+			<table>
+				<tr>
+					<th> {{currentID}}</td>
+					<th>{{list_by_id.name}} </td>
+				</tr>
+				<tr ng-repeat="x in list_items">
+					<td>{{ x.id }}</td>
+					<td>{{ x.text }}</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<!--  users: id, name,email,mobile,first_action,last_action,status_id,text -->
+			<legend>/test/api/users/</legend>
+
+
+			<table>
+					<tr>
+						<th>id</th>
+						<th>name</th>
+						<th>email</th>
+						<th>mobile</th>
+						<th>first_action</th>
+						<th>last_action</th>
+						<th>status_id</th>
+						<th>text</th>
+					</tr>
+					<tr ng-repeat="x in users">
+
+						<td>{{ x.id }}</td>
+						<td>{{ x.name }}</td>
+						<td>{{ x.email }}</td>
+						<td>{{ x.mobile }}</td>
+						<td>{{ x.first_action }}</td>
+						<td>{{ x.last_action }}</td>
+						<td>{{ x.status_id }}</td>
+						<td>{{ x.text }}</td>
+					</tr>
+			</table>
+		</fieldset>
+	</div >
+</div>
+

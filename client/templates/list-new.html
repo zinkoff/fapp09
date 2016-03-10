@@ -1,0 +1,16 @@
+---
+name: ny-liste
+url: /list-new/
+controller: listerCtrl
+route: /list-new/
+title: ny liste
+animationIn: slideInRight
+---
+
+<div ng-controller="listerCtrl">
+<h1>{{status}}</h1>
+	<span class="inline-label">
+		<input type="search" ng-model="new_list_name" ng-keyup="$event.keyCode == 13 && Add_list()" placeholder="Tilføj liste">
+		<a href="#" class="button" ng-click="Add_list()">Tilføj</a>
+	</span>
+</div>

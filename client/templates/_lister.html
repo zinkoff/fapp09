@@ -1,0 +1,48 @@
+---
+name: lister
+url: /lister/:id/
+
+route: /lister/:id/
+title: lister
+animationIn: slideInRight
+---
+
+<a class="button" href="#" zf-popup-toggle="popup">Open Popup</a>
+<zf-popup id="popup" class="padding">
+	ID: {{test_result}}
+</zf-popup>
+
+<!--<div ng-controller="Add">
+
+
+  </div>-->
+
+
+<div class="container" id="lister">
+	<div  ng-controller="listerCtrl">
+
+		<fieldset>
+		<!-- lists: id, list_name -->
+			<legend>Lister</legend>
+
+			<h5>{{status}}</h5>
+
+			<span class="inline-label">
+				<input type="search" ng-model="new_list_name" ng-keyup="$event.keyCode == 13 && Add_list()" placeholder="Tilføj liste">
+				<a href="#" class="button" ng-click="Add_list()">Tilføj</a>
+			</span>
+
+			<ul ng-repeat="x in lists"  ng-show="lists.length">
+
+				<li >
+					<span class="alert badge" data="{{x.id}}" ng-click="Delete_list($event)">#</span>
+					<a href="/#/liste/{{ x.id}}/"> {{ x.list_name }}</a>
+				</li>
+			</ul>
+
+		</fieldset>
+
+
+	</div >
+</div>
+

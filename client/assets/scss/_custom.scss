@@ -1,0 +1,20 @@
+/*td,th {margin:rem-calc(5);padding:rem-calc(5);}*/
+
+tr:nth-child(even) {background:$secondary-color;}
+
+#lister{ul{decoration:none;}}
+
+ul { list-style: none outside;  }
+
+/*	forms 	*/
+
+input[type="checkbox"]{
+display: block;
+width: 21px;
+height: 21px;
+background: url(/assets/images/strike/check-large.png) 0 0 no-repeat;
+float: left;
+//margin-left: -30px;
+}
+
+.angular-google-map-container { height: 400px; }

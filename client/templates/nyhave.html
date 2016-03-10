@@ -1,0 +1,120 @@
+---
+name: ny-have
+url: /ny-have/
+controller: nyHaveCtrl
+title: Ny have
+animationIn: slideInRight
+---
+<div id="nyHave">
+
+<p style="color:red;"># {{status1}} #</p>
+<a href="#" class="button tiny" ng-click="nyHave()">Opret have</a>
+
+
+<zf-accordion class="nulstil">
+
+<form class="row" data-abide>
+
+<zf-accordion-item title="Haveejeroplysning">
+
+	<div class="grid-block"><!-- om haveejere -->
+
+	   	<div class="small-12 medium-6  medium-centered grid-content "><!--navne-->
+			<label >Navn *
+      			<div class="clearfix" style="margin-top: 8px;">
+      				<input id="name1" class="float-left has-postfix"  type="text" required pattern="[a-zA-Z]+" placeholder="Navn">
+      				<a href="#"  class="button postfix float-right reveal-input-field bg-green">+</a>
+      			</div>
+    		</label>
+    		<small class="error"></small>
+		</div>
+
+
+		<div class="small-12 medium-6 medium-centered grid-content hidden">
+			<label>
+			   Navn-2
+			   <input type="text" placeholder="Indtast eventuelt andet navn">
+		   </label>
+	   </div>
+
+	   <div class="small-12 medium-6 medium-centered grid-content"><!--adresse-->
+		   <label>
+			   Gade og nummer *
+			   <input type="text" placeholder="Text field" class="small-12 columns">
+			</label>
+		</div>
+
+		<div class="small-4 medium-2 grid-content">
+			<label>
+			   Postnr. *
+			   <input type="number" placeholder="Postnummer">
+		   </label>
+	   </div>
+
+	   <div class="small-8 medium-4 grid-content">
+			<label>
+			   By
+			   <input type="text" placeholder="By">
+		   </label>
+	   </div>
+
+		<!-- email1 -->
+		<div class="small-12 medium-6  medium-centered grid-content">
+		   <label>
+				Email *
+			   	<div class="clearfix" style="margin-top: 8px;">
+			   	<input id="email1" type="email" class="float-left has-postfix" placeholder="Email">
+			   	<a href="#"  class="button postfix float-right reveal-input-field bg-green">+</a>
+			   	</div>
+			</label>
+		</div>
+
+		<!-- email2 -->
+		<div class="small-12 medium-6 medium-centered grid-content ng-hide">
+			<label>
+			   Email2
+			   <input type="email" placeholder="Text field">
+		   </label>
+	   </div>
+
+	   	<!-- mobil1 -->
+	   	<div class="small-12 medium-6  medium-centered grid-content"><!--phone-->
+		   <label>
+			   Mobil
+			   <div class="clearfix" style="margin-top: 8px;">
+			   	<input id="mobil1" type="tel" class="float-left has-postfix" placeholder="Email">
+			   	<a href="#"  class="button postfix float-right reveal-input-field bg-green">+</a>
+			   	</div>
+			</label>
+		</div>
+
+		<!-- mobil2-->
+		<div class="small-12 medium-6  medium-centered grid-content ng-hide">
+		   <label>
+			   Mobil2
+			   <input type="tel" placeholder="Indtast mobiltelefonnummer">
+			</label>
+		</div>
+
+		<!-- fastnet -->
+		<div class="small-12 medium-6 medium-centered grid-content">
+			<label>
+			   Telefon (fastnet)
+			   <input type="tel" placeholder="Indtast fastnettelefonnummer">
+		   </label>
+	   </div>
+	</div>
+
+</zf-accordion-item>
+<zf-accordion-item title="Om æblerne">
+Content goes here
+</zf-accordion-item>
+<zf-accordion-item title="Om plukning og afhentning">
+Content goes here
+</zf-accordion-item>
+
+
+</form>
+</zf-accordion>
+
+</div>

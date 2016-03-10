@@ -1,0 +1,37 @@
+---
+name: liste
+url: /liste/:id/
+route: /:id/
+controller: listerCtrl
+animationIn: slideInRight
+---
+<div class="container id="liste" style="background:#f00;">
+	<div class="hljs" style="background:#dee;">
+		<fieldset>
+			<legend></legend>
+
+				<div >
+					<h1>{{test}}</h1>
+					<h2>{{list_name}}</h2>
+				</div>
+				<ul>
+					<li  ng-repeat="x in list_items | filter:{status_id:1}">
+						<input class="badge put-on-hold" data="{{x.id}}" text="{{x.text}}" newStatusValue="2" ng-click="Item_status($event)" type="checkbox"></input>
+						 {{x.text}}
+					</li>
+
+					<li>
+						<span class="inline-label">
+<input type="search" ng-model="item_text" ng-keyup="$event.keyCode == 13 && Add_item()" placeholder="Tilføj emne">
+<a href="#" class="button" ng-click="Add_item()">Tilføj</a>
+</span>
+					</li>
+					<!--<li  ng-repeat="x in list_items | filter:{status_id:2}">
+						<span class="badge" data="{{x.id}}" ng-click="Item_status($event)">x</span>
+						 {{x.text}}
+					</li>-->
+				</ul>
+
+		</fieldset>
+	</div>
+</div>
