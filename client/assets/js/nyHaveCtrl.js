@@ -1,5 +1,4 @@
 angular.module('application')
-
 .controller('nyHaveCtrl',nyHaveCtrl);
 
 nyHaveCtrl.$inject = ['$scope','$http', '$stateParams', '$state', '$controller'];
