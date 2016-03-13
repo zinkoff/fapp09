@@ -12,7 +12,8 @@
     <script src="/assets/js/app.js"></script>
   </head>
   <body>
-  	<zf-offcanvas id="offcanvas-menu" position="left" class="">
+  <!--
+	<zf-offcanvas id="offcanvas-menu" position="left" class="">
 		<a zf-close="" class="close-button">×</a><nav class="left-off-canvas-menu">
  		<ul ng-include="'partials/main-menu.html'" class="off-canvas-list"></ul></nav>
 	</zf-offcanvas>
@@ -34,6 +35,51 @@
       <div ui-view class="grid-content" style="margin-top:10px;">
       </div>
     </div>
+    </div>
+ -->
+    <zf-offcanvas position="left" id="menu">
+      <a zf-close="" class="close-button">×</a>
+      <h2>fapp06</h2>
+      <ul class="primary condense menu-bar vertical">
+        <li zf-close ui-sref-active="is-active"><a ui-sref="home">Home</a></li>
+    <li zf-close ui-sref-active="my-active-class"><a ui-sref="resource">resource</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="invoiceController">invoiceController uden service</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="invoiceController-with-currencyConverter-as-service">invoiceController with currencyConverter as service</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="using-a-service">using-a-service</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="google-maps">Google Maps</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="lister">Lister</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="ny-have">Ny have</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="ny-liste">Ny liste</a></li>
+		<li zf-close ui-sref-active="my-active-class"><a ui-sref="liste">Del</a></li>
+      </ul>
+    </zf-offcanvas>
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
+        <div class="menu-group">
+          <div class="menu-group-left">
+            <ul class="primary condense menu-bar">
+              <li class="show-for-small-only"><a class="offcanvas-toggle" zf-hard-toggle="menu" style="font-size:36px;margin:0 5px 0 5px;padding:5px;">&equiv;</a></li>
+              <li class="show-all" ui-sref-active="is-active"><a ui-sref="home"><strong>fapp06</strong></a></li>
+              <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="resource">resource</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="invoiceController">invoiceController uden service</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="invoiceController-with-currencyConverter-as-service">invoiceController with currencyConverter as service</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="using-a-service">using-a-service</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="google-maps">Google Maps</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="lister">Lister</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="ny-have">Ny have</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="ny-liste">Ny liste</a></li>
+			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="liste">Del</a></li>
+            </ul>
+          </div>
+          <!-- <div class="menu-group-right shrink">
+            <ul class="menu-bar primary">
+              <li><a href="http://stephensaucier.com">by stevo</a></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <base href="/"/>
+      <div ng-class="['ui-animation']" class="grid-frame vertical fadeIn easeInOut" ui-view style="padding:10px;"></div>
     </div>
   </body>
 </html>
