@@ -152,7 +152,7 @@ gulp.task('server', ['build'], function() {
   gulp.src('./build')
     .pipe($.webserver({
       port: 8077,
-      host: 'localhost',
+      host: '192.168.0.11',
       fallback: 'index.html',
       livereload: true,
       open: true
