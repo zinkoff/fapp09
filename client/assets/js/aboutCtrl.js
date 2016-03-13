@@ -1,10 +1,7 @@
-angular.module('application')
-    .controller('aboutCtrl', aboutCtrl)
-;
+angular.module('application').controller('aboutCtrl', aboutCtrl);
 
 aboutCtrl.$inject = ['$scope', '$stateParams', '$state', '$controller'];
 
 function aboutCtrl($scope, $stateParams, $state, $controller) {
-
-   $scope.greeting = 'hello';
+	$scope.greeting = 'hello';
 }

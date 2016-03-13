@@ -1,5 +1,4 @@
 angular.module('application')
-
 .controller('listerCtrl',listerCtrl);
 
 listerCtrl.$inject = ['$scope','$http', '$stateParams', '$state', '$controller'];

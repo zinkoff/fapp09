@@ -1,4 +1,3 @@
-
 angular.module('application')
 .controller('mapsCtrl',mapsCtrl);
 
