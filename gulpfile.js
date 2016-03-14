@@ -152,7 +152,7 @@ gulp.task('server', ['build'], function() {
   gulp.src('./build')
     .pipe($.webserver({
       port: 8077,
-      host: '192.168.0.11',
+      host: 'mikbook.local',
       fallback: 'index.html',
       livereload: true,
       open: true

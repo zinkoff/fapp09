@@ -4,7 +4,7 @@
   angular.module('application', [
     'ui.router',
     'ngAnimate',
-
+	'ngResource',
     //foundation
     'foundation',
     'foundation.dynamicRouting',
