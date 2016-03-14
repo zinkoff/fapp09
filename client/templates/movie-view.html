@@ -1,8 +1,9 @@
 ---
 name: viewMovie
 url: /movies/:id/view
+controller: MovieViewController
 ---
-<div ng-app="movieApp" ng-controller="MovieViewController">
+<!-- <div ng-app="movieApp" ng-controller="MovieViewController"> -->
 <table class="table movietable">
     <tr>
         <td><h3>Details for {{movie.title}}</h3></td>
@@ -28,4 +29,4 @@ url: /movies/:id/view
 <div>
     <a class="button primary" ui-sref="editMovie({id:movie._id})">Edit</a>
 </div>
-</div>
+<!-- </div> -->

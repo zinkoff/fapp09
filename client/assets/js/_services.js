@@ -2,7 +2,7 @@
  * Created by Sandeep on 01/06/14.
  */
 
-angular.module('movieApp.services',[])
+angular.module('application.services',[])
 .factory('Movie',function($resource){
     return $resource('http://movieapp-sitepointdemos.rhcloud.com/api/movies/:id',{id:'@_id'},{
         update: {
@@ -15,3 +15,10 @@ angular.module('movieApp.services',[])
         return $window.confirm(message);
     }
 });
+
+/*app.factory('Movie', function($resource) {
+return $resource(URL, {id: '@_id'}, {
+'get': { method:'GET', cache: true},
+'query': { method:'GET', cache: true, isArray:true }
+});
+});*/

@@ -35,4 +35,4 @@
   }
 
 })();
-angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movieApp.services']);
+// angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movieApp.services']);

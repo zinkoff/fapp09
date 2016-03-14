@@ -1,4 +1,4 @@
-angular.module('movieApp.controllers', []).controller('MovieListController', function($scope, $state, popupService, $window, Movie) {
+angular.module('movieApp.controllers', []).controller('MovieListController', function($scope, $state, /*popupService,*/ $window, Movie) {
   $scope.movies = Movie.query(); //fetch all movies. Issues a GET to /api/movies
 
   $scope.deleteMovie = function(movie) { // Delete a movie. Issues a DELETE to /api/movies/:id
