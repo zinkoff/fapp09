@@ -1,0 +1,9 @@
+---
+name: editMovie
+url: /movies/:id/edit
+---
+<div ng-app="movieApp" ng-controller="MovieEditController">
+    <form class="form-horizontal" role="form" ng-submit="updateMovie()">
+    <div ng-include="'partials/_form.html'"></div>
+	</form>
+</div>
