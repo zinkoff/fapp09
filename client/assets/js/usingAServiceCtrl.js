@@ -1,11 +1,11 @@
 angular.module('application').controller('usingAServiceCtrl',usingAServiceCtrl);
-usingAServiceCtrl.$inject = ['$scope','$http','$controller','notify','alert'];
+usingAServiceCtrl.$inject = ['$scope','$http','$controller','notify','makeAlert'];
 
-function usingAServiceCtrl($scope, $http, $controller,notify,haver1){
+function usingAServiceCtrl($scope, $http, $controller,notify,makeAlert){
 	$scope.callNotify = function(msg) {
 		notify(msg);
 	};
-	$scope.callAlert = function(skriv) {
-		alert(skriv);
+	$scope.callMakeAlert = function(skriv) {
+		makeAlert('@'+skriv);
 	};
 }

@@ -4,7 +4,10 @@
   angular.module('application', [
     'ui.router',
     'ngAnimate',
-
+	'ngResource',
+	//movieApp
+	'application.controllers',
+	'application.services',
     //foundation
     'foundation',
     'foundation.dynamicRouting',
@@ -32,3 +35,4 @@
   }
 
 })();
+// angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movieApp.services']);
