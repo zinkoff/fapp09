@@ -6,8 +6,8 @@
     'ngAnimate',
 	'ngResource',
 	//movieApp
-	'movieApp.controllers',
-	'movieApp.services',
+	'application.controllers',
+	'application.services',
     //foundation
     'foundation',
     'foundation.dynamicRouting',
