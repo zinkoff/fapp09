@@ -2,7 +2,36 @@
 name: ks.kontrolemne
 url: /kontrolemne/:id
 controller: kontrolemneCtrl
+animationIn: slideInRight
 ---
-<h4>ks.kontrolemne #</h4>
-<p>id = {{id}}</p>
-<p># {{kontrol.kontroller.id}} #</p>
+<style>
+
+	dd,dt{display: inline;}
+	dd{border:1px red solid;}
+	.kontrolemneCtrl dt:after{content:":";}
+
+</style>
+<div class="kontrolemneCtrl">
+	<h4>
+		ks.kontrolemne #
+	</h4>
+	<p>
+		id = {{id}}
+	</p>
+	<p>
+		# kontrol #
+	</p>
+	<hr />
+	<div class="" ng-repeat="x in kontrol">
+		<dl class="bg-yellow">
+			<dt>id</dt>					<dd>{{x.id}}</dd>
+			<dt>description</dt>		<dd>{{x.description}}</dd>
+			<dt>status</dt>				<dd>{{x.status}}</dd>
+			<dt>dato</dt>				<dd>{{x.date}}</dd>
+			<dt>user</dt>				<dd>{{x.user}}</dd>
+			<dt>sidste opdatering</dt>	<dd ng-repeat="y in x.updates | limitTo:1">{{y}}</dd>
+		</dl>
+		<div ng-repeat="z in x.media | limitTo:1"><img src="{{z.uri}}" alt="{{z.id}}" /></div>
+	</div>
+</div>
+{"id":"uid","type":"tegning","uri":"path2file","annotation":"base64"}

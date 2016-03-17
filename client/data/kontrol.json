@@ -1,44 +1,198 @@
-{
-	"kontroller": [{
-		"id": "uid",
-		"description": "some text",
-		"status": "0|1|99",
-		"date": "yyyymmdd-hhmm",
-		"user": "[userID]",
-		"updates": [
-			"userID@[servertime]"
-		],
-		"media": [{
-			"id": "uid",
-			"type": "tegning",
-			"uri": "path2file",
-			"annotation": "base64"
-		}, {
-			"id": "uid",
-			"type": "foto",
-			"uri": "path2file",
-			"annotation": "base64",
-			"timestamp": ""
-		}]
-	}, {
-		"id": "uid",
-		"description": "some text",
-		"status": "0|1|99",
-		"date": "yyyymmdd-hhmm",
-		"user": "[userID]",
-		"updates": [
-			"userID@[servertime]"
-		],
-		"media": [{
-			"id": "uid",
-			"type": "tegning",
-			"uri": "path2file",
-			"annotation": "base64"
-		}, {
-			"id": "uid",
-			"type": "foto",
-			"uri": "path2file",
-			"annotation": "base64"
-		}]
-	}]
-}
+[
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "mikael@tosti.dk#20160310-1234","mikael@tosti.dk#20160312-1233"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64",
+        "timestamp": ""
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64"
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64",
+        "timestamp": ""
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64"
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64",
+        "timestamp": ""
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64"
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64",
+        "timestamp": ""
+      }
+    ]
+  },
+  {
+    "id": "uid",
+    "description": "some text",
+    "status": "0|1|99",
+    "date": "yyyymmdd-hhmm",
+    "user": "[userID]",
+    "updates": [
+      "userID@[servertime]"
+    ],
+    "media": [
+      {
+        "id": "uid",
+        "type": "tegning",
+        "uri": "path2file",
+        "annotation": "base64"
+      },
+      {
+        "id": "uid",
+        "type": "foto",
+        "uri": "path2file",
+        "annotation": "base64"
+      }
+    ]
+  }
+]

@@ -13,4 +13,9 @@ function kontrolemneCtrl($scope,$http,$stateParams,$state,$controller){
         //Second function handles error
         $scope.kontrol = "Something went wrong";
     });
+    $scope.splitUpdateInfo = function(update) {
+
+	var res = str.update("@");
+	return res[0] + ' ' + res[1];
+    }
 }
