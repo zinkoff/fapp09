@@ -13,6 +13,11 @@ function kontrolemneCtrl($scope,$http,$stateParams,$state,$controller){
         //Second function handles error
         $scope.kontrol = "Something went wrong";
     });
+    $scope.getHeight = function() {
+    	$scope.h = angular.element(document.querySelector('#mikael'))[0].offsetHeight;
+    	$scope.t = angular.element(document.querySelector('#mikael'))[0].offsetTop;
+    		$scope.l = angular.element(document.querySelector('#mikael'))[0].offsetLeft;
+    	}
     $scope.splitUpdateInfo = function(update) {
 
 	var res = str.update("@");
