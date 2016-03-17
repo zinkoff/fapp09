@@ -32,7 +32,7 @@ animationIn: slideInRight
 		<div class="grid-content" ng-repeat="foto in x.media | limitTo: 1" >
 			<a ng-click="getHeight('#mikael')" class="button">imageH</a>
 			<img id="mikael" src="{{foto.uri}}" alt="{{foto.annotation}}" style="background:url({{foto.uri}});background-repeat: no-repeat;"/>
-			<img id="mikael" src="{{foto.annotation}}" alt="{{foto.annotation}}" style=""/>
+			<img id="mikael" src="{{foto.annotation}}" alt="{{foto.annotation}}" style="z-index:999;margin-top:-{{h}}px;"/>
 		</div>
 	</div>
 	<!-- background:url({{foto.uri}});background-repeat: no-repeat; -->
