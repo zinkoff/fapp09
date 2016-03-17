@@ -37,21 +37,27 @@
     </div>
     </div>
  -->
-    <zf-offcanvas position="left" id="menu">
+    <zf-offcanvas position="top" id="menu">
       <a zf-close="" class="close-button">×</a>
       <h2>fapp06</h2>
-      <ul class="primary condense menu-bar vertical">
-        <li zf-close ui-sref-active="is-active"><a ui-sref="home">Home</a></li>
-        <li zf-close ui-sref-active="my-active-class"><a ui-sref="movies">movieApp</a></li>
-    <li zf-close ui-sref-active="my-active-class"><a ui-sref="resource">resource</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="invoiceController">invoiceController uden service</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="invoiceController-with-currencyConverter-as-service">invoiceController with currencyConverter as service</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="using-a-service">using-a-service</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="google-maps">Google Maps</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="lister">Lister</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="ny-have">Ny have</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="ny-liste">Ny liste</a></li>
-		<li zf-close ui-sref-active="my-active-class"><a ui-sref="liste">Del</a></li>
+      <ul c mary condense menu-bar vertical">
+        <li  ui-sref-active="is-active"><a ui-sref="home">Home</a></li>
+
+        <li  ui-sref-active="my-active-class"><a ui-sref="movies">movieApp</a></li>
+    	<li ui-sref-active="my-active-class"><a ui-sref="resource">resource</a></li>
+		<li ui-sref-active="my-active-class"><a ui-sref="ks">ks</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="ks.kontrol">ks.kontrol</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="kontrolemne/:id">ks.kontrolemne</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="resource">resource</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="invoiceController">invoiceController uden service</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="invoiceController-with-currencyConverter-as-service">invoiceController with currencyConverter as service</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="using-a-service">using-a-service</a></li>
+
+<li ui-sref-active="my-active-class"><a ui-sref="google-maps">Google Maps</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="lister">Lister</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="ny-have">Ny have</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="ny-liste">Ny liste</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="liste">Del</a></li>
       </ul>
     </zf-offcanvas>
     <div class="grid-frame vertical">
@@ -62,16 +68,19 @@
               <li class="show-for-small-only"><a class="offcanvas-toggle" zf-hard-toggle="menu" style="font-size:36px;margin:0 5px 0 5px;padding:5px;">&equiv;</a></li>
               <li class="show-all" ui-sref-active="is-active"><a ui-sref="home"><strong>fapp09</strong></a></li>
               <li ui-sref-active="my-active-class"><a ui-sref="movies">movieApp</a></li>
-              <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="resource">resource</a></li>
-              <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="crud">crud</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="invoiceController">invoiceController uden service</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="invoiceController-with-currencyConverter-as-service">invoiceController with currencyConverter as service</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="using-a-service">using-a-service</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="google-maps">Google Maps</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="lister">Lister</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="ny-have">Ny have</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="ny-liste">Ny liste</a></li>
-			  <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="liste">Del</a></li>
+              <li ui-sref-active="my-active-class" class="hide-for-small-only"><a ui-sref="resource">resource</a></li><li ui-sref-active="my-active-class"><a ui-sref="ks">ks</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="ks.kontrol">ks.kontrol</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="kontrolemne/:id">ks.kontrolemne</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="resource">resource</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="invoiceController">invoiceController uden service</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="invoiceController-with-currencyConverter-as-service">invoiceController with currencyConverter as service</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="using-a-service">using-a-service</a></li>
+
+<li ui-sref-active="my-active-class"><a ui-sref="google-maps">Google Maps</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="lister">Lister</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="ny-have">Ny have</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="ny-liste">Ny liste</a></li>
+<li ui-sref-active="my-active-class"><a ui-sref="liste">Del</a></li>
             </ul>
           </div>
           <!-- <div class="menu-group-right shrink">

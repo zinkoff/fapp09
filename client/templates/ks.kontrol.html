@@ -1,0 +1,15 @@
+---
+name: ks.kontrol
+url: /kontrol
+animationIn: fadeIn
+animationOut: fadeOut
+---
+<h4>ks.kontrol</h4>
+<input ng-model="id" type="text" style="width:100px;"/>
+
+<p>
+	<a ui-sref="ks.kontrolemne({id:id})">
+		kontrolemne {{id}}
+		{{kontrolemner}}
+	</a>
+</p>

@@ -3,9 +3,9 @@ angular.module('application')
 
 listerCtrl.$inject = ['$scope','$http', '$stateParams', '$state', '$controller'];
 
-function listerCtrl($scope,$http,$stateParams,$state,$controller){
+function listerCtrl($scope,$http,$stateParams,$state,$controller) {
 
-	//////////////////////////////////////variables////////////////////////////////////////
+	//////////////////////////////////////variables/////////////////////////////////
 	var currentID = $stateParams.id;
 	$scope.currentID = currentID;
 	$scope.test = "";
@@ -28,22 +28,7 @@ function listerCtrl($scope,$http,$stateParams,$state,$controller){
 
 		$scope.status = "Have bliver oprettet";
 
-		/*var request = $http({
-    		method: "post",
-    		url: api_server + "/haver/new/",
-    		data: {
-        		item_text: $scope.item_text,
-        		user_id: user_id
-    		},
-    		headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-		});
-		//	Check whether the HTTP Request is successful or not.
-		request.success(function (data) {
-			$scope.status = "Item er nu indsat" + data;
-			$state.go('/about/')
-			//	viewItems(currentID);
-			//	$scope.item_text = "";
-		});*/
+
 	}
 	//////////////////////////////////////$http////////////////////////////////////////
 	//	lists.id, lists.list_name
@@ -214,13 +199,7 @@ function listerCtrl($scope,$http,$stateParams,$state,$controller){
 		});
 	}
 
-	/*
-	$scope.Item_status = function (provider) {
-        var dataValue = provider.target.attributes.data.value;
-        console.log('clicked signin ' + provider + " # " + dataValue);
-        $scope.test = dataValue;
- 	}
-	*/
+
 
 
 }

@@ -151,7 +151,7 @@ gulp.task('uglify:app', function() {
 gulp.task('server', ['build'], function() {
   gulp.src('./build')
     .pipe($.webserver({
-      port: 8077,
+      port: 8075,
       host: 'mikbook.local',
       fallback: 'index.html',
       livereload: true,
