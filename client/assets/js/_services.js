@@ -15,7 +15,7 @@ angular.module('application.services',[])
 		delete()*/
     });
 })
-.factory('popupService',function($window){
+.service('popupService',function($window){
     this.showPopup=function(message){
         return $window.confirm(message);
     }

@@ -37,6 +37,12 @@ animationIn: slideInRight
 		<drawOnCanvas>asf</drawOnCanvas>
 		<foto>FOTO</foto>
 
+
+		<div class="grid-content" ng-repeat="foto in x.media | limitTo: 1" >
+			<a ng-click="getHeight('#mikael')" class="button">imageH</a>
+			<img id="mikael" src="{{foto.uri}}" alt="{{foto.annotation}}" style="background:url({{foto.uri}});background-repeat: no-repeat;"/>
+			<img id="mikael" src="{{foto.annotation}}" alt="{{foto.annotation}}" style=""/>
+>>>>>>> parent of 4e7fbc7... update
 		</div>
 
 	</div>
