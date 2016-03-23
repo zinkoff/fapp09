@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7" > <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="AMeijer.nl - Resizable HTML5 Canvas">
+  <meta name="author" content="Alex Ameijer on AMeijer.nl">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cleartype" content="on">
+
+  <link rel="stylesheet" href="respondCanvas.css?v=1">
+
+  <style>
+
+  	html, body{ margin:0px; padding:0px; }
+  	body{ display:block; width:100%; height:100%; }
+  	#main{
+  		/*display:block; width:80%; padding:50px 10%; height:300px; */
+  	}
+	#main {
+    position: relative;
+
+}
+
+#main canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  </style>
+
+</head>
+<body>
+
+<div id="container">
+    <header>
+		<div id="logo">
+			<h1><a href="http://ameijer.nl/" class="ir">Alex Meijer</a></h1>
+		</div>
+    </header>
+
+    <div id="main" role="main">
+	    <canvas id="respondCanvas" width="100" height="100">
+	    	<!-- Provide fallback -->
+	    </canvas>
+	    <img style="width:100%" id="respondImage" src="http://multimedia.pol.dk/archive/01013/Manu_Sareen_1013866p.jpg"/>
+    </div>
+
+    <footer>
+		<p><a href="http://ameijer.nl/2011/08/resizable-html5-canvas/">Read the entire article</a></p>
+		<p>Demo by <a href="http://ameijer.nl">AMeijer</a></p>
+    </footer>
+</div> <!--! end of #container -->
+
+  <script src="respondCanvas-jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='respondCanvas-jquery.js'>\x3C/script>")</script>
+  <script type="text/javascript">
+  	$(document).ready( function(){
+
+  		//Get the canvas & context
+  		var c = $('#respondCanvas');
+  		var ct = c.get(0).getContext('2d');
+  		var container = $(c).parent();
+
+  		//Run function when browser  resize
+	  	$(window).resize( respondCanvas );
+
+	  	function respondCanvas(){
+  			c.attr('width', $('#respondImage').width() ); //max width
+  			c.attr('height', $('#respondImage').height() ); //max height
+
+  			//Redraw & reposition content
+  			var x = c.width();
+  			var y = c.height();
+  			ct.font = "20px Calibri";
+
+  			ct.fillStyle = "#DDDDDD"; //black
+  			//ct.fillRect( 0, 0, x, y); //fill the canvas
+
+  			var resizeText = "Canvas2 width: "+c.width()+"px # height: "+c.height();
+  			ct.textAlign = "center";
+  			ct.fillStyle = "#ff0000"; //white
+	  		ct.fillText(resizeText, (x/2), (y/2) );
+		}
+
+		//Initial call
+		respondCanvas();
+  	});
+
+
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+Header set Access-Control-Allow-Origin http://app.frugtplukkerne.dk
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+RewriteEngine On
+RewriteBase /api
+
+
+RewriteCond %{REQUEST_METHOD} (GET|PUT|POST|DELETE|OPTIONS)
+RewriteRule .* index.php
+#RewriteRule .* /var/www/docs/www.frugtplukkerne.dk/app/api/index.php

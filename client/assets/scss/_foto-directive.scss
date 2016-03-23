@@ -1,0 +1,8 @@
+.foto-directive {
+	.containerdiv {
+		float: left; position: relative; background:green;width:100%;
+	}
+	.cornerimage {
+		position: absolute; top: 0; right: 0; background:none;
+	}
+}

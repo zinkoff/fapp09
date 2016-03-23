@@ -14,9 +14,13 @@ function kontrolemneCtrl($scope,$http,$stateParams,$state,$controller){
         $scope.kontrol = "Something went wrong";
     });
     $scope.getHeight = function() {
-    	$scope.h = angular.element(document.querySelector('#mikael'))[0].offsetHeight;
-    	$scope.t = angular.element(document.querySelector('#mikael'))[0].offsetTop;
-    		$scope.l = angular.element(document.querySelector('#mikael'))[0].offsetLeft;
+    	$scope.h = angular.element(document.querySelector('#kontrolImage'))[0].offsetHeight;
+    	$scope.t = angular.element(document.querySelector('#kontrolImage'))[0].offsetTop;
+    		$scope.l = angular.element(document.querySelector('#kontrolImage'))[0].offsetLeft;
+    		$scope.h2 = angular.element(document.querySelector('#kontrolImage2'))[0].offsetHeight;
+    	$scope.t2 = angular.element(document.querySelector('#kontrolImage2'))[0].offsetTop;
+    		$scope.l2 = angular.element(document.querySelector('#kontrolImage2'))[0].offsetLeft;
+    		$scope.h3 = h+19;
     	}
     $scope.splitUpdateInfo = function(update) {
 

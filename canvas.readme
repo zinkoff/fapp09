@@ -1,0 +1,21 @@
+http://ameijer.nl/2011/08/resizable-html5-canvas/
+view-source:http://ameijer.nl/demo/respondCanvas.html
+
+http://stackoverflow.com/questions/10037649/how-can-i-stack-two-same-sized-canvas-on-top-of-each-other
+
+<div class="wrapper">
+    <canvas id="canvas1" width="400" height="300"></canvas>
+    <canvas id="canvas2" width="400" height="300"></canvas>
+</div>
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+.wrapper canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

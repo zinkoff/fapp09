@@ -5,18 +5,21 @@ controller: kontrolemneCtrl
 animationIn: slideInRight
 ---
 
+
+<div class="grid_frame kontrolemneCtrl" ng-repeat="x in kontrol |  filter: {'id': '333'}"><!--flyttes til controller, så filtrering sker der http://goo.gl/yquC28 -->
+
 <style>
 
 	dd,dt{display: inline;}
 	dd{border:1px red solid;}
 	.kontrolemneCtrl dt:after{content:":";}
 	.kontrolemneCtrl img{width:100%;margin:0;padding:0;}
-	.kontrolemneCtrl img:nth-child[2]{top:-268px;}
+	.kontrolemneCtrl img:nth-child[2]{top:-{{h3}}px;}
+	.ready{background:yellow;}
+	.ok{background:green;}
+	.hold{background:red;}
 
 </style>
-
-<div class="grid_frame kontrolemneCtrl" ng-repeat="x in kontrol |  filter: {'id': '333'}"><!--flyttes til controller, så filtrering sker der http://goo.gl/yquC28 -->
-
 	<div class="grid-block">
 		<div class="grid-content">
 			<h4>Imagetest: {{h}}</h4>
@@ -24,24 +27,19 @@ animationIn: slideInRight
 		</div>
 	</div>
 	<div class="grid-block">
-		<div class="grid-content small-4 columns">h: {{h}}</div>
-		<div class="grid-content small-4 columns">t: {{t}}</div>
-		<div class="grid-content small-4 columns">l: {{l}}</div>
+		<div class="grid-content small-4 columns ready">h: {{h}} h2: {{h2}}</div>
+		<div class="grid-content small-4 columns ok">t: {{t}} t2: {{t2}}</div>
+		<div class="grid-content small-4 columns hold">l: {{l}} l: {{l2}}</div>
 	</div>
 	<div class="grid-block">
-		<div class="grid-content" ng-repeat="foto in x.media | limitTo: 1" >
-			<a ng-click="getHeight('#mikael')" class="button">imageH</a>
-			<img id="mikael" src="{{foto.uri}}" alt="{{foto.annotation}}" style="background:url({{foto.uri}});background-repeat: no-repeat;"/>
-			<img id="mikael" src="{{foto.annotation}}" alt="{{foto.annotation}}" style="z-index:999;margin-top:-{{h}}px;"/>
-		</div>
-	</div>
-	<!-- background:url({{foto.uri}});background-repeat: no-repeat; -->
-	<!--
-http://stackoverflow.com/questions/20602382/angularjs-how-to-find-img-element-height-and-width
-https://docs.angularjs.org/api/ng/function/angular.element
-https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight
-	-->
 
+		<div class="grid-content" ng-repeat="foto in x.media | limitTo: 1">
+		<drawOnCanvas>asf</drawOnCanvas>
+		<foto>FOTO</foto>
+
+		</div>
+
+	</div>
 	<div class="grid-block">
 		<div class="grid-content">
 			<dl class="bg-yellow">

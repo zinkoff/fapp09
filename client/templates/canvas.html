@@ -1,0 +1,68 @@
+---
+name: canvas
+url: /canvas
+title: canvas
+animationIn: fadeIn
+---
+
+<div class="grid-block" ng-class="[currentSlug, 'ui-animation']" ui-view class="bg-yellow">
+<h3>canvas</h3>
+
+	<div class="canvas-directive">
+		<div id="page">
+			<div class="header">
+				<a id="new" class="button" onclick="newCanvas()">
+					New
+				</a>
+				<div class="title">
+					Sketch Pad
+				</div>
+			</div>
+			<div id="content" class="content">
+				<p style="text-align:center">
+					Loading Canvas...
+				</p>
+			</div>
+			<div class="footer">
+				<div>
+					<img id="canvasimg" />
+					<input type="button" value="save" id="btn" size="30" onclick="save()" style="background:red;">
+						<input type="button" value="save2" id="btn" size="30" onclick="save3(canvas.toDataURL())" style="background:green;">
+							<input type="button" value="mail" id="btn" size="30" onclick="link2mail(canvas.toDataURL())" style="background:yellow;">
+<!--
+<input type="button" value="mail" id="btn" size="30" onclick="sendMail" style="background:navy;">
+    		<a href="mailto:me@me.com?subject=Me&body=%3Chtml%20xmlns%3D%22http:%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3C%2Fhead%3E%3Cbody%3EPlease%20%3Ca%20href%3D%22http:%2F%2Fwww.w3.org%22%3Eclick%3C%2Fa%3E%20me%3C%2Fbody%3E%3C%2Fhtml%3E">html-email</a>
+ -->
+							</div>
+							<div class="palette-case">
+								<div class="palette-box">
+									<div class="palette white" onclick="selectColor(this)">
+									</div>
+								</div>
+								<div class="palette-box">
+									<div class="palette red" onclick="selectColor(this)">
+									</div>
+								</div>
+								<div class="palette-box">
+									<div class="palette orange" onclick="selectColor(this)">
+									</div>
+								</div>
+								<div class="palette-box">
+									<div class="palette blue" onclick="selectColor(this)">
+									</div>
+								</div>
+								<div class="palette-box">
+									<div class="palette green" onclick="selectColor(this)">
+									</div>
+								</div>
+								<div class="palette-box">
+									<div class="palette black" onclick="selectColor(this)">
+									</div>
+								</div>
+								<div style="clear:both">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>

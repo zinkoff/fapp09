@@ -8,6 +8,7 @@
 	//movieApp
 	'application.controllers',
 	'application.services',
+	'ks-directives',
     //foundation
     'foundation',
     'foundation.dynamicRouting',

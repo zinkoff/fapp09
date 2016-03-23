@@ -1,0 +1,4 @@
+# upload til fapp09.tosti.info
+export PATH=$HOME/.node/bin:$PATH
+
+foundation build && /Users/tosti/Sites/ks/site/fapp09/rsync.sh && say "Så er det gjort"

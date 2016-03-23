@@ -1,0 +1,23 @@
+<div class="foto-directive">
+<h3>foto - directive</h3>
+		<a ng-click="getHeight('#kontrolImage')" class="button">imageH</a>
+		<div class="containerdiv">
+			<img id="kontrolImage" border="0" height="{{h}}" src="{{foto.uri}}" alt=""">
+			<img id="kontrolImage2" class="cornerimage"  height="{{h}}" border="0" src="{{foto.annotation}}" alt="">
+		</div>
+</div>
+<!--
+<div>
+<img id="kontrolImage" src="{{foto.uri}}" alt="{{foto.annotation}}"/>
+<img id="kontrolImage2" src="{{foto.annotation}}" alt="{{foto.annotation}}" style="border:1px black solid;z-index:999;margin-top:-{{h}}px;"/>
+</div>
+ -->
+
+<!--
+http://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html
+http://stackoverflow.com/questions/20602382/angularjs-how-to-find-img-element-height-and-width
+https://docs.angularjs.org/api/ng/function/angular.element
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight
+
+
+-->
