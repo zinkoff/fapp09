@@ -5,18 +5,18 @@ controller: MediaViewController
 ---
 <h3>viewMedia # /media/:id/ # MediaViewController </h3>
 <div>
-{{media}}
+
 </div>
 <p>{{media.type}}</p>
 
 
 <style>
-#content {
+.annotations {
     position: relative;
 
 }
 
-#content img:first-child {
+.annotations  img:first-child {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,13 +24,17 @@ controller: MediaViewController
     z-index:1;
 }
 
-#content img:nth-child(2) {
+.annotations img:nth-child(2) {
  position: absolute;
     top: 0;
     left: 0;
     width:300px;
     z-index:0;
 </style>
+<div class="annotations">
+	<img style="width:50%;" src="{{media.annotation}}"/>
+	<img style="width:50%;" src="{{media.uri}}"/>
+</div>
 <!--data:image/png;base64,-->
 <style>
 .dl-horizontal > dt{float:left;width:120px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}
@@ -51,5 +55,4 @@ controller: MediaViewController
   <dd>{{media.timestamp}}</dd>
   <dt>userID</dt>
   <dd>{{media.userID}}</dd>
-
 </dl>
