@@ -13,61 +13,13 @@ $app->put('/have/:id/', 'put_haver_by_id');
 $app->delete('/haver/', 'delete_haver');
 $app->delete('/have/:id/', 'delete_have');
 
-#############################
 
-$app->post('/media','post_media');
-$app->get('/media/:id/','get_media');
+$app->get('/media/:id/', 'get_media');
 
-function get_media($id) {
-
-	$l = new iisx_frugtpluk();
-
-	//	build sql
-  	$sql = "SELECT type, uri,annotation,timestamp FROM media WHERE id = '{$id}'";
-
-  		$outp = $l->query2json($sql);
-
-
-  	echo $outp;
+function get_media($id,$columns=''){
+	get_haver(1,$columns,$id);
 }
 
-function post_media() {
-	/*	variabler	*/
-	$l = new iisx_frugtpluk();
-	$type = '';
-	$uri = '';
-	$annotation = '';
-	$userID = 'Mikael';
-	$sql = "";
-	/*	opret liste til æblesorter 	*/
-	//	generer id på 8 tegn
-	$_c = new ContentID();
-	//	nulstil resultat af efterfølgende query
-	$result = 0;
-	//	opret liste - gentages automatisk, hvis ikke id er unikt
-	while($result<1) {
-		$id = $_c->contentID();
-		$result = $l->query(
-		"INSERT INTO `media` (
-			`id`,
-			`type`,
-			`uri`,
-			`annotation`,
-			`timestamp`,
-			`userID`
-			) VALUES (
-			'{$id}',
-			'{$type}',
-			'{$uri}',
-			'{$annotation}',
-			'".date('Y-m-d G:i:s')."',
-			'{$userID}');"
-		);
-		$result = $l->query($sql);
-	}
-	echo $id;
-}
-#############################
 
 function get_have($id,$columns=''){
 	get_haver(1,$columns,$id);
@@ -80,9 +32,9 @@ function get_haver($limit='',$columns='',$id='') {
 	//	build sql
   	$sql = "SELECT ";
   	$sql.= (isset($columns) && $columns !== '')?str_replace(':',',',$columns):" * ";
-  	$sql.= " FROM `haver` ";
+  	$sql.= " FROM `media` ";
   	$sql.= (isset($id) && $id !== '')?" WHERE id = '{$id}' ":" ";
-	$sql.= (isset($id) && $id !== '')?" ":" ORDER BY created desc ";
+	$sql.= (isset($id) && $id !== '')?" ":" ORDER BY id desc ";
   	$sql.= (isset($limit) && $limit>0)?" LIMIT {$limit} " :" ";
 
 	if((isset($limit) && $limit==='1') || (isset($id) && $id !== '')){

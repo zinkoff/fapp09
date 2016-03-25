@@ -20,9 +20,9 @@ class Db {
 
 		// Configuration
 		$config = array();
-		$config['username'] = 'frugtplukkerne';
+		$config['username'] = 'ks';
 		$config['password'] = 'BpqR9*nR935$$w%';
-		$config['dbname'] = 'frugtplukkerne';
+		$config['dbname'] = 'ks';
 
 		// Try and connect to the database
 		if(!isset(self::$connection)) {

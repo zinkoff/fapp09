@@ -28,3 +28,6 @@ function kontrolemneCtrl($scope,$http,$stateParams,$state,$controller){
 	return res[0] + ' ' + res[1];
     }
 }
+
+
+

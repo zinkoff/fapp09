@@ -1,20 +1,6 @@
-angular.module('application.services',[])
-.factory('Media',function($resource){
-    return $resource(api_server + '/media/:id',{id:'@_id'},{
-        'update' : { method: 'PUT' },
-        'get': { method:'GET', cache: false},
-		'query': { method:'GET', cache: false, isArray:true }
-		/*,
-		get()
-		query()
-		save()
-		remove()
-		delete()
-		*/
-    });
-})
-.service('popupService1',function($window){
-    this.showPopup=function(message){
-        return $window.confirm(message);
-    }
-});
+
+// .service('popupService1', function($window){
+//     this.showPopup=function(message){
+//         return $window.confirm(message);
+//     }
+// });

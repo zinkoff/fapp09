@@ -14,12 +14,6 @@ app.directive("drawoncanvas", function() {
   };
 });
 
-app.directive("media", function() {
-  return {
-    restrict: "E",
-    templateUrl: "directives/media.html"
-  };
-});
 
 
 
