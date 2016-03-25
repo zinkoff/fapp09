@@ -7,3 +7,49 @@ controller: MediaViewController
 <div>
 {{media}}
 </div>
+<p>{{media.type}}</p>
+
+
+<style>
+#content {
+    position: relative;
+
+}
+
+#content img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:300px;
+    z-index:1;
+}
+
+#content img:nth-child(2) {
+ position: absolute;
+    top: 0;
+    left: 0;
+    width:300px;
+    z-index:0;
+</style>
+<!--data:image/png;base64,-->
+<style>
+.dl-horizontal > dt{float:left;width:120px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}
+.dl-horizontal > dd{margin-left:130px}
+</style>
+<dl class="dl-horizontal">
+  <dt>ID</dt>
+  <dd>{{media.id}}</dd>
+  <dt>type</dt>
+  <dd>{{media.type}}</dd>
+  <dt>uri</dt>
+  <dd><figure><img width='100' src="{{media.uri}}"/>
+<figcapture>{{media.uri}}</figcapture></figure></dd>
+  <dt>annotation</dt>
+  <dd><figure><img width='100' src="{{media.annotation}}"/>
+<figcapture>{{media.annotation}}</figcapture></figure></dd>
+  <dt>timestamp</dt>
+  <dd>{{media.timestamp}}</dd>
+  <dt>userID</dt>
+  <dd>{{media.userID}}</dd>
+
+</dl>
