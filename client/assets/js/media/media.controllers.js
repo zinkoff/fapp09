@@ -18,6 +18,10 @@ angular.module('application.controllers')
   $scope.media = Media.query(); //Get multiple media. Issues a GET to /api/media/:id
 
 })
+.controller('MediaUploadController', function($scope, $stateParams, Media) {
+  $scope.media = Media.query(); //Get multiple media. Issues a GET to /api/media/:id
+
+})
 .controller('MediaCreateController', function($scope, $state, $stateParams, Media) {
   $scope.media = new Media();  //create new media instance. Properties will be set via ng-model on UI
 
