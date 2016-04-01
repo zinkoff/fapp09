@@ -47,8 +47,9 @@ var paths = {
   ],
   // These files are for your app's JavaScript
   appJS: [
+  	'bower_components/jquery/jquery.min.js',
     'client/assets/js/app.js',
-    'client/assets/js/**/*.*'
+    'client/assets/js/**/*.js'
   ]
 }
 
@@ -152,7 +153,7 @@ gulp.task('uglify:app', function() {
 gulp.task('server', ['build'], function() {
   gulp.src('./build')
     .pipe($.webserver({
-      port: 8075,
+      port: 60099,
       host: 'mikbook.local',
       fallback: 'index.html',
       livereload: true,

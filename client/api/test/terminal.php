@@ -1,5 +1,5 @@
 <?php
 $outp = "<p>";
-$outp.= shell_exec("curl -i -X PUT http://mikbook.local:60014/test/api/newlist/");
+$outp.= shell_exec("curl -i -X POST http://mikbook.local:60046/api/lists/");
 echo $outp
 ?>

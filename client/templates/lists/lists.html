@@ -1,0 +1,34 @@
+---
+url: /lists
+name: lists
+---
+<style>.lists label {width:300px;}</style>
+<div class="lists">
+<hr/>
+		<div ng-controller="ListsCreateController"><a class="button" ng-click="addLists()">Create list</a></div>
+<hr/><label>
+		View list by id
+		<span class="inline-label">
+		<input ng-model="id" type="text" placeholder="Indtast id for listen">
+		<a ui-sref="listsView({id:id})" class="button">View list {{id}}</a>
+		</span>
+		</label>
+<hr/><label>
+		Update list by id
+		<span class="inline-label">
+		<input ng-model="id" type="text" placeholder="Indtast id for listen">
+		<a ui-sref="lists.update({id:id})" class="button">View list {{id}}</a>
+		</span>
+		</label>
+<hr/><label>
+		Delete list by id
+		<span class="inline-label">
+		<input ng-model="id" type="text" placeholder="Indtast id for listen">
+		<a ui-sref="lists.delete({id:id})" class="button">View list {{id}}</a>
+		</span>
+		</label>
+<hr/>
+
+<div class="grid-block" ng-class="[currentSlug, 'ui-animation']" ui-view class="bg-yellow">
+</div>
+</div>

@@ -1,0 +1,37 @@
+---
+name: viewMedia
+url: /view-media/:id/
+controller: MediaViewController
+---
+<div class="viewMedia container">
+
+	<div class="row bg-blue">
+		<div class="annotations small-3 columns bg-purple" class="nul">
+			<img class="w100" src="{{media.annotation}}" /> <img class="w100" src="{{media.uri}}" />
+		</div>
+	</div>
+
+	<div class="row bg-yellow ">
+
+		<div class=" small-12 columns">
+
+			<dl class="dl-horizontal">
+				<dt>ID</dt>
+				<dd>{{media.id}}</dd>
+				<dt>type</dt>
+				<dd>{{media.type}}</dd>
+				<dt>uri</dt>
+				<dd>{{media.timestamp}}</dd>
+				<dt>userID</dt>
+				<dd>{{media.userID}}</dd>
+			</dl>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+

@@ -1,0 +1,56 @@
+---
+name: lists.update
+url: /update/:id
+controller: ListsEditController
+---
+
+<h3>/lists/add/</h3>
+<h4></h4>
+<h5>
+5
+</h5>
+<div>
+	<form class="row" method="POST" data-abide ng-submit="addLists(lists)" name="lists-add-form">
+
+
+	<div class="small-12 medium-6 medium-centered grid-content">
+	<label>
+		Navn
+		<input type="text" placeholder="angiv sag" class="small-12  required  columns" ng-model="lists.list_name">
+	</label>
+</div>
+<!--sag-->
+<div class="small-12 medium-6 medium-centered grid-content">
+	<label>
+		Sag
+		<input type="text" placeholder="angiv sag" class="small-12  required  columns" ng-model="lists.sag">
+	</label>
+</div>
+<!--faggruppe-->
+<div class="small-12 medium-6 medium-centered grid-content">
+	<label>
+		Faggruppe
+		<input type="text" placeholder="angiv faggruppe" class="small-12  required  columns" ng-model="lists.faggruppe">
+	</label>
+</div>
+<!--kategori-->
+<div class="small-12 medium-6 medium-centered grid-content">
+	<label>
+		Kontrolkategori
+		<input type="text" placeholder="angiv kontrolkategori" class="small-12  required  columns" ng-model="lists.kategori">
+	</label>
+</div>
+<!--kontroldel-->
+<div class="small-12 medium-6 medium-centered grid-content">
+	<label>
+		Kontroldel
+		<input type="text" placeholder="angiv kontroldel" class="small-12  required  columns" ng-model="lists.del">
+	</label>
+</div>
+
+<!-- submit -->
+<div class="small-12 medium-6 medium-centered grid-content">
+	<input type="submit" class="button" value="opret kontrolliste" />
+</div>
+</form>
+</div>

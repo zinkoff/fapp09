@@ -1,23 +1,43 @@
-/*td,th {margin:rem-calc(5);padding:rem-calc(5);}*/
+//td,th {margin:rem-calc(5);
+//padding:rem-calc(5);}
 
-tr:nth-child(even) {background:$secondary-color;}
+tr:nth-child(even){background: $secondary-color;}
 
-#lister{ul{decoration:none;}}
+#lister ul{ decoration: none; list-style: none outside; }
 
-ul { list-style: none outside;  }
 
-/*	forms 	*/
+//forms
 
-input[type="checkbox"]{
-display: block;
-width: 21px;
-height: 21px;
-background: url(/assets/images/strike/check-large.png) 0 0 no-repeat;
-float: left;
-//margin-left: -30px;
+input[type="checkbox"]
+{
+	display: block;
+	width: 21px;
+	height: 21px;
+	background: url(/assets/images/strike/check-large.png) 0 0 no-repeat;
+	float: left;
+	//margin-left: -30px;
 }
 
 .angular-google-map-container { height: 400px; }
 
 .my-active-class{background:red;}
+
 .red{color:red;}
+
+code{font-size:75%;}
+
+.dl-horizontal {
+	>dt
+	{
+	  background:green;
+	  color:yellow;
+	  float: left;
+	  width: 120px;
+	  overflow: hidden;
+	  clear: left;
+	  text-align: right;
+	  //text-overflow: ellipsis;
+	  white-space: nowrap;
+	}
+	>dd { margin-left: 130px;background:$alert-color; float:right;}
+}

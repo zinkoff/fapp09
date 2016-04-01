@@ -5,11 +5,17 @@
     'ui.router',
     'ngAnimate',
 	'ngResource',
-	//movieApp
+	//	pushmenu
+	//'wxy.components',
+	//'wxy.pushmenu',
+	//	movieApp
 	'application.controllers',
 	'application.services',
+	//	directives
 	'ks-directives',
-    //foundation
+	'visuals-directives',
+
+    //	foundation
     'foundation',
     'foundation.dynamicRouting',
     'foundation.dynamicRouting.animations'

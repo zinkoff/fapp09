@@ -1,0 +1,26 @@
+---
+name: viewAllMedia
+url: /view-all-media/
+controller: MediaViewAllController
+---
+<div class="viewAllMedia" class="nul">
+
+	<div class="grid-block small-up-3" class="nul">
+
+		<div class="grid-content" ng-repeat="single in media" class="nul">
+
+			<figure class="nul">
+
+				<a ui-sref="viewMedia({id:single.id})">
+					<img src="{{single.annotation}}" style="background:url({{single.uri}});background-size:contain;" />
+				</a>
+
+				<figcapture class="nul">{{single.id}}</figcapture>
+
+			</figure>
+
+		</div>
+
+	</div>
+
+</div>

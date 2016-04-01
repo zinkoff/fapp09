@@ -1,0 +1,51 @@
+//annotations
+
+.annotations {
+
+  img:first-child {
+    left: 0;
+    position: absolute;
+    top: 0;
+    min-width: 300px;
+    z-index: 1;
+  }
+
+  img:nth-child(2) {
+    left: 0;
+    position: absolute;
+    top: 0;
+   	min-width: 300px;
+    z-index: 0;
+    }
+
+position: relative;
+
+}
+
+.viewAllMedia {
+
+	.grid-block { padding: 10px; margin: 0;}
+
+	// Only affects medium screens and smaller
+	@include breakpoint(medium down) {
+
+		figcapture
+		{
+			color: orange;
+			font-size:0.2rem;
+		}
+
+	}
+	// Only affects medium screens, not small or large
+	@include breakpoint(medium only) {
+
+		figcapture
+		{
+		color: blue;
+		}
+
+	}
+
+
+
+}

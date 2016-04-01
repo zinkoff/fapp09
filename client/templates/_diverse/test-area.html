@@ -1,0 +1,34 @@
+---
+url: /test-area
+name: test-area
+
+---
+<!--
+<wxy-push-menu menu="menu" options="options"></wxy-push-menu>
+    <div id="pushobj">
+        Some content here!
+
+        <ul>
+            <li ng-repeat="event in events track by $index" ng-bind="event"></li>
+        </ul>
+    </div>
+ -->
+
+
+<!--
+<fieldset ng-controller="MediaCreateController">
+	<legend>MediaCreateController</legend>
+	<media></media>
+</fieldset>
+<hr/>
+<media></media>
+<hr/>
+ -->
+
+<a ng-controller="MediaViewController" ui-sref="viewMedia({id:id})" class="button primary">Se media</a>
+<a ng-controller="MediaViewAllController" ui-sref="viewAllMedia" class="button primary">Se al media</a>
+
+<hr/>
+
+<a class="button" ng-controller="ListsCreateController" ui-sref="createList">Opret liste</a>
+	<btnnewmedia></btnnewmedia>

@@ -1,6 +1,5 @@
 <?php
-$errors = array();
-$errors[0] = "Der opstod en fejl - tjek venligst felterne";
+
 #	slim < version 2
 
 $app->get('/haver/:limit/','get_haver');
@@ -8,12 +7,13 @@ $app->get('/haver/:limit/:columns/','get_haver');
 $app->get('/haver/', 'get_haver');
 $app->get('/have/:id/', 'get_have');
 $app->get('/have/:id/:columns/', 'get_have');
-$app->post('/haver/new/', 'haver_new');
 $app->put('/have/:id/', 'put_haver_by_id');
+$app->post('/haver/new/', 'haver_new');
+
 $app->delete('/haver/', 'delete_haver');
 $app->delete('/have/:id/', 'delete_have');
 
-
+/*	Media	*/
 $app->get('/media/:id/', 'get_media');
 
 function get_media($id,$columns=''){
@@ -123,11 +123,11 @@ function haver_new() {
 
 	//	opret have med unikt id og indsæt sort_list_id
 
-	while($result<1) {
+	/*while($result<1) {
 		$have_id = $_c->contentID();
 		$sql = "INSERT INTO
 		`haver` (`id`, `created`,`sort_list_id`,`first_user`)
-		VALUES ('{$have_id}', '".date('Y-m-d G:i:s')."', '".$list_id."', '".$user_id."');";
+		VALUES ('{$have_id}', '".date('Y-m-d G:i:s')."', '".$list_id."', '".$user_id."');";*/
 
 
 
