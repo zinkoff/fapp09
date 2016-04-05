@@ -1,11 +1,18 @@
 <div class="foto-directive">
-<h3>foto - directive</h3>
-		<a ng-click="getHeight('#kontrolImage')" class="button">imageH</a>
-		<div class="containerdiv">
-			<img id="kontrolImage" border="0" height="{{h}}" src="{{foto.uri}}" alt=""">
-			<img id="kontrolImage2" class="cornerimage"  height="{{h}}" border="0" src="{{foto.annotation}}" alt="">
-		</div>
+
+<h3>foto - directive  {{foto.text}}</h3>
+
+<a ng-click="getHeight('#kontrolImage')" class="button">imageH</a>
+
+	<div class="containerdiv">
+
+		<img id="kontrolImage" border="0" height="{{h}}" src="{{foto.uri}}" alt=""">
+		<img id="kontrolImage2" class="cornerimage"  height="{{h}}" border="0" src="{{foto.annotation}}" alt="">
+
+	</div>
+
 </div>
+
 <!--
 <div>
 <img id="kontrolImage" src="{{foto.uri}}" alt="{{foto.annotation}}"/>

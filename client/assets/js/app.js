@@ -14,6 +14,7 @@
 	//	directives
 	'ks-directives',
 	'visuals-directives',
+	'pw.canvas-painter',
 
     //	foundation
     'foundation',

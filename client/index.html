@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="application">
   <head>
     <meta charset="utf-8" />
@@ -11,7 +11,7 @@
     <script src="/assets/js/routes.js"></script>
     <script src="/assets/js/app.js"></script>
   </head>
-  <body>
+  <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 300);">
   <!--
 	<zf-offcanvas id="offcanvas-menu" position="left" class="">
 		<a zf-close="" class="close-button">×</a><nav class="left-off-canvas-menu">
@@ -37,19 +37,21 @@
     </div>
     </div>
  -->
+ <zf-offcanvas class="canvasoffcanvas" id="canvasoffcanvas" position="right" style="width:100%;height:100%;background:yellow;">
+ <div pw-canvas options="{width: 2000, height: 1000, backgroundColor: '#fff', color: '#f00', lineWidth: 5, opacity: 0.9, undo: 10, imageSrc: '/assets/images/flora.jpg', customCanvasId: 'pwCanvasMain'}">
+<div pw-color-selector="['#000', '#00f', '#0f0', '#f00']" color="model.myColor"></div></div>
+</zf-offcanvas>
     <zf-offcanvas position="top" id="menu">
       <a zf-close="" class="close-button">×</a>
       <h2><a href="http://mikbook.local:60046">fapp09</a></h2>
       <ul c mary condense menu-bar vertical">
-        <li  ui-sref-active="is-active"><a href="http://mikbook.local:60046">Home</a></li>
-        <li  ui-sref-active="my-active-class"><a ui-sref="movies">movieApp</a></li>
-        <li ui-sref-active="my-active-class"><a ui-sref="test-area">test-area</a></li>
-    	<li ui-sref-active="my-active-class"><a href="/canvas4.html">canvas4</a></li>
-    	<li ui-sref-active="my-active-class"><a ui-sref="canvas">canvas</a></li>
-    	<li ui-sref-active="my-active-class"><a href="/canvas3.html">canvas3</a></li>
-		<li ui-sref-active="my-active-class"><a ui-sref="ks">ks</a></li>
-		<li ui-sref-active="my-active-class"><a ui-sref="ks.kontrol">ks.kontrol</a></li>
-		<li ui-sref-active="my-active-class"><a ui-sref="kontrolemne/:id">ks.kontrolemne</a></li>
+        <li ui-sref-active="is-active"><a href="http://mikbook.local:60046">Home</a></li>
+        <li ui-sref-active="my-active-class"><a zf-close="" ui-sref="movies">movieApp</a></li>
+        <li ui-sref-active="my-active-class"><a zf-close="" ui-sref="test-area">test-area</a></li>
+    	<li ui-sref-active="my-active-class"><a zf-close="" ui-sref="canvas">canvas</a></li>
+		<li ui-sref-active="my-active-class"><a zf-close="" ui-sref="ks">ks</a></li>
+		<li ui-sref-active="my-active-class"><a zf-close="" ui-sref="ks.kontrol">ks.kontrol</a></li>
+		<li ui-sref-active="my-active-class"><a zf-close="" ui-sref="kontrolemne/:id">ks.kontrolemne</a></li>
 		<!--
 <li ui-sref-active="my-active-class"><a ui-sref="resource">resource</a></li>
 		<li ui-sref-active="my-active-class"><a ui-sref="invoiceController">invoiceController uden service</a></li>
@@ -73,9 +75,7 @@
               <li ui-sref-active="my-active-class"><a ui-sref="accounts">accounts</a></li>
               <li ui-sref-active="my-active-class"><a ui-sref="movies">movieApp</a></li>
               <li ui-sref-active="my-active-class"><a ui-sref="test-area">test-area</a></li>
-              <li ui-sref-active="my-active-class" class="hide-for-small-only"><a href="/canvas4.html">canvas4</a></li>
               <li ui-sref-active="my-active-class"><a ui-sref="canvas">canvas</a></li>
-              <li ui-sref-active="my-active-class"><a href="/canvas3.html">canvas3</a></li>
               <li ui-sref-active="my-active-class"><a ui-sref="ks">ks</a></li>
 			  <li ui-sref-active="my-active-class"><a ui-sref="ks.kontrol">ks.kontrol</a></li>
 			  <li ui-sref-active="my-active-class"><a ui-sref="kontrolemne/:id">ks.kontrolemne</a></li>

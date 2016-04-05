@@ -4,7 +4,7 @@ url: /upload-media/
 controller: MediaUploadController
 ---
 <div class="uploadMedia container">
-
+<h1>{{media.img_server}}</h1>
 	<div class="container">
   <!-- Button to select & upload files -->
   <span class="btn btn-success fileinput-button">
@@ -30,9 +30,9 @@ controller: MediaUploadController
 
   <!-- Load jQuery and the necessary widget JS files to enable file upload -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/a_jquery.ui.widget.js"></script>
-  <script src="js/b_jquery.iframe-transport.js"></script>
-  <script src="js/c_jquery.fileupload.js"></script>
+  <script src="http://mikbook.local:60046/uploads/js/a_jquery.ui.widget.js"></script>
+  <script src="http://mikbook.local:60046/uploads/js/b_jquery.iframe-transport.js"></script>
+  <script src="http://mikbook.local:60046/uploads/js/c_jquery.fileupload.js"></script>
 
 
 
@@ -44,7 +44,7 @@ controller: MediaUploadController
         'use strict';
 
         // Define the url to send the image data to
-        var url = 'api/uploads/files.php';
+        var url = 'http://mikbook.local:60046/uploads/files.php';
 
         // Call the fileupload widget and set some parameters
         $('#fileupload').fileupload({
@@ -56,7 +56,7 @@ controller: MediaUploadController
 
                 $.each(data.result.files, function (index, file) {
                     $('<li/>').text(file.name).appendTo('#files');
-                    $('#display_files').prepend('<a href="/api/files/'+file.name+'"><img id="'+file.name+'" src="/api/files/thumbnail/'+file.name+'" /></a>');
+                    $('#display_files').prepend('<a href="http://mikbook.local:60046/uploads/files/'+file.name+'"><img id="'+file.name+'" src="http://mikbook.local:60046/uploads/files/thumbnail/'+file.name+'" /></a>');
                 });
             },
             progressall: function (e, data) {

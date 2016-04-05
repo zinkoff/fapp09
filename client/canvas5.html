@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="canvas4.css" rel="stylesheet" type="text/css">
+	<script src='canvas4.js'></script>
+
+<title>/Users/tosti/Sites/canvas.tosti.info/html5-canvas-drawing-app-master/index_javascript-med-save.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+
+	<script type="text/javascript"></script>
+</head>
+<body>
+<div id="page">
+    <div class="header">
+		<a id="new" class="navbtn" onclick="newCanvas()">New</a>
+        <div class="title">Sketch Pad</div>
+    </div>
+<!--
+<style>
+#content {
+    position: relative;
+
+}
+
+#content canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}</style>
+ -->
+    <div id="content" class="content" style="position:relative;">
+    	<canvas style="z-index:10;yellow:none;top:0;left:0;margin:0;padding:0;background:url(/assets/images/flora.jpg);background-size: contain;" id="canvas" class="canvas" width="100" height="100"></canvas>
+    	<img style="background:url(/assets/images/flora.jpg);z-index:0;position:relative;top:-3000px;left:-3000px;padding:0;margin:0;width:100%" id="respondImage" src="/assets/images/flora.jpg"/>
+    </div>
+    <div class="footer">
+    	<div>
+
+    		<img id="canvasimg" style="background-size:contain;"/>
+    		<input type="button" value="save" id="btn" size="30" onclick="save()" style="background:red;">
+    		<input type="button" value="save2" id="btn" size="30" onclick="save3(canvas.toDataURL())" style="background:green;">
+    		<input type="button" value="mail" id="btn" size="30" onclick="link2mail(canvas.toDataURL())" style="background:yellow;">
+    		<!--
+<input type="button" value="mail" id="btn" size="30" onclick="sendMail" style="background:navy;">
+    		<a href="mailto:me@me.com?subject=Me&body=%3Chtml%20xmlns%3D%22http:%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3C%2Fhead%3E%3Cbody%3EPlease%20%3Ca%20href%3D%22http:%2F%2Fwww.w3.org%22%3Eclick%3C%2Fa%3E%20me%3C%2Fbody%3E%3C%2Fhtml%3E">html-email</a>
+ -->
+
+
+    	</div>
+    		<div class="palette-case">
+			<div class="palette-box">
+				<div class="palette white" onclick="selectColor(this)"></div>
+			</div>
+			<div class="palette-box">
+				<div class="palette red" onclick="selectColor(this)"></div>
+			</div>
+			<div class="palette-box">
+				<div class="palette orange" onclick="selectColor(this)"></div>
+			</div>
+			<div class="palette-box">
+				<div class="palette blue" onclick="selectColor(this)"></div>
+			</div>
+			<div class="palette-box">
+				<div class="palette green" onclick="selectColor(this)"></div>
+			</div>
+			<div class="palette-box">
+				<div class="palette black" onclick="selectColor(this)"></div>
+			</div>
+
+			<div style="clear:both"></div>
+
+		</div>
+    </div>
+</div>
+  <script src="respondCanvas-jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='respondCanvas-jquery.js'>\x3C/script>")</script>
+  <script  src="canvas-on-jQuery.js"></script>
+
+</body>
+</html>

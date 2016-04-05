@@ -34,7 +34,7 @@
 // 1. CSS Exports
 // - - - - - - - - - - - - - - -
 
-// Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
+// Change any value in this map from "true" to "false" to disable that components CSS class output. Youll still be able to use the component´s mixins, but none of our pre-written classes will be in your CSS.
 
 // $include-css: (
 //   accordion: true,
@@ -445,12 +445,13 @@
 // $modal-radius: 0px;
 // $modal-shadow: none;
 // $modal-zindex: 1000;
-// $modal-sizes: (
-//   tiny: 300px,
-//   small: 500px,
-//   medium: 600px,
-//   large: 800px,
-// );
+$modal-sizes: (
+   tiny: 300px,
+   small: 500px,
+   medium: 600px,
+   large: 800px,
+	full: 100%
+ );
 
 // $modal-overlay-class: 'modal-overlay';
 // $modal-overlay-background: rgba(#333, 0.7);

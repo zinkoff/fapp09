@@ -19,7 +19,7 @@ angular.module('application.controllers')
 
 })
 .controller('MediaUploadController', function($scope, $stateParams, Media) {
-  $scope.media = Media.query(); //Get multiple media. Issues a GET to /api/media/:id
+  //$scope.media = Media.query(); //Get multiple media. Issues a GET to /api/media/:id
 
 })
 .controller('MediaCreateController', function($scope, $state, $stateParams, Media) {

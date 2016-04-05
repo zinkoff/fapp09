@@ -1,0 +1,119 @@
+---
+name: angularCanvasPainter
+url: /angular-canvas-painter
+---
+
+
+<style>
+.angular-canvas-drawing {
+
+  //img:first-child {
+  	>div>div>canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+    min-width: 300px;
+    z-index: 1;
+  }
+
+  //img:nth-child(2) {
+    left: 0;
+    position: absolute;
+    top: 0;
+   	min-width: 300px;
+    z-index: 0;
+    }
+
+position: relative;
+
+}
+//#pwCanvasTmp{background:url(/assets/images/flora.jpg);background-size:contain;}
+</style>
+<script>
+
+</script>
+<a zf-open="canvasModal" class="button">Open modal</a>
+
+<div zf-modal="" id="canvasModal" class="canvas-modal dialog full" style="padding:0;">
+
+	<a zf-close="" class="close-button">×</a>
+	<a id="saveCanvasButton" ng-click="testFunk()" class="close-button button hollow">gem</a>
+
+	<div pw-canvas options="{ width: 960, height: 720, imageSrc: '/assets/images/flora.jpg', backgroundColor: '#fff', color: '#fF0f00', lineWidth: 5, opacity: 0.9, undo: 9, customCanvasId: 'pwCanvasMain'}"></div>
+	<div pw-color-selector="['#000', '#00f', '#0f0', '#f00']" color="model.myColor"></div>
+
+	<div style="z-index:999999999999;">
+		<script>
+			function putImage() {
+			alert('asdf');
+		  		var canvas1 = document.getElementById("pwCanvasMain");
+				if (canvas1.getContext) {
+				   var ctx = canvas1.getContext("2d");
+				   var myImage = canvas1.toDataURL("image/png");
+				}
+				var imageElement = document.getElementById("MyPix");
+				imageElement.src = myImage;
+			}
+		</script>
+		<a href="#" onclick="putImage()">klik</a>
+		<img id="MyPix" src=""/>
+	</div>
+
+</div>
+
+
+
+<!--
+
+<a zf-open="canvasoffcanvas" class="button small w25">Open Off-canvas</a>
+ -->
+<!-- options: {width: 400, //px height: 300, //px backgroundColor: '#fff', color: '#000', lineWidth: 1, //px opacity: 0.9, //0-1 undo: false // boolean or a number of versions to keep in memory imageSrc: 'images/example.jpg', // loads the specified image and sets it as background image, customCanvasId: 'myCustomId' // define a custom value for the id attribute of the canvas element (default: 'pwCanvasMain') }-->
+
+
+
+
+<!--
+<div pw-canvas options="{width: 500, height: 400, backgroundColor: '#fff', color: '#fF0f00', lineWidth: 1, opacity: 0.3, undo: false, imageSrc: '/assets/images/flora.jpg', customCanvasId: 'pwCanvasMain'}">
+<div pw-color-selector="['#000', '#00f', '#0f0', '#f00']" color="model.myColor"></div></div>
+
+
+	<div class="pwCanvasPaint angular-canvas-drawing" style="position:relative">
+		<canvas id="pwCanvasMain"  style="left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-width: 300px;
+    z-index: 2;"></canvas>
+		<canvas id="pwCanvasTmp"   style="left: 0;
+    position: absolute;
+    top: 0;
+     width: 100%;
+    min-width: 300px;
+    z-index: 1;
+    background:url(/assets/images/flora.jpg);background-size: contain;"></canvas>
+		<!~~
+<img id="pwCanvasBgImg"  style="left: 0;
+    position: absolute;
+    top: 0;
+    min-width: 300px;
+    z-index: 0;" src="/assets/images/flora.jpg"/>
+ ~~>
+	</div>
+ -->
+
+<!--
+<style>
+
+#content canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}</style>
+
+    <div id="content" class="content" style="position:relative;">
+    	<canvas style="z-index:10;yellow:none;top:0;left:0;margin:0;padding:0;background:url(/assets/images/flora.jpg);background-size: contain;" id="canvas" class="canvas" width="100" height="100"></canvas>
+    	<img style="background:url(/assets/images/flora.jpg);z-index:0;position:relative;top:-3000px;left:-3000px;padding:0;margin:0;width:100%" id="respondImage" src="/assets/images/flora.jpg"/>
+
+
+    </div>
+ -->
