@@ -12,6 +12,9 @@
 
 $app->get('/media/', 'get_all_media');
 $app->get('/media/:id/', 'get_media');
+$app->get('/media/:id', 'get_media');
+$app->get('/media/:id/uri', 'get_media_uri');
+$app->get('/media/:id/uri/', 'get_media_uri');
 $app->post('/media/', 'create_media');
 $app->delete('/media/:id', 'delete_media');
 $app->put('/media/:id', 'update_media');
@@ -44,6 +47,26 @@ function get_media($id) {
   	}
 
   	echo $outp;
+}
+
+function get_media_uri($id) {
+
+	if(!$id)$id = 'all';
+	$l = new iisx_frugtpluk();
+
+	//	build sql
+  	$sql = "SELECT uri FROM `media` WHERE id = '{$id}' LIMIT 1";
+
+	$rows = $l->select($sql);
+
+		if(!$rows) {
+			die($errors[0]);
+		}
+		else
+		{
+			echo $rows[0]['uri'];
+		}
+
 }
 
 function create_media() {

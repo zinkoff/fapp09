@@ -1,7 +1,7 @@
 ---
 url: /test-area
 name: test-area
-controller: MediaUploadController
+
 ---
 <h1>{{media.img_server}}</h1>
 <!--
@@ -23,18 +23,21 @@ controller: MediaUploadController
 <media></media>
 <hr/>
  -->
-
+<a ui-sref="examples" class="button primary">examples</a>
 <a ui-sref="uploadMedia" class="button primary">Upload media</a>
 <a ui-sref="modal" class="button primary">modal</a>
 
 <div class="clearfix">
 	<input type="txt" ng-model="id" class="w25 float-left"/>
 	<a href="#" class="alert button float-right">
+<!--
 	<a ng-controller="MediaViewController" ui-sref="viewMedia({id:id})" class="button primary w50 float right">Se media</a>
+ -->
 </div>
 
+<!--
 <a ng-controller="MediaViewController" ui-sref="viewMedia({id:id})" class="button primary w50 float right">Se media</a></a>
-
+-->
 <a ng-controller="MediaViewAllController" ui-sref="viewAllMedia" class="button primary">Se al media</a>
 
 <hr/>
@@ -42,5 +45,4 @@ controller: MediaUploadController
 <a class="button" ng-controller="ListsCreateController" ui-sref="createList">Opret liste</a>
 
 <hr/>
-<foto></foto>
-<btnnewmedia></btnnewmedia>
+

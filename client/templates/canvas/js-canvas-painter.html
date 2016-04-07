@@ -7,7 +7,7 @@ url: /js-canvas-painter
 
 <div zf-modal="" id="canvasModal" class="canvas-modal dialog full" style="padding:0;">
 <a zf-close="canvasModal" class="button hollow">close js-canvas</a>
- <style type="text/css">
+<style>
 canvas {
     margin:0px;
     width:100%;
@@ -243,58 +243,7 @@ function save() {
 }
 
 	</script>
-	<script>
-	function save2(dURL){
 
-
-"use strict";var c=document.getElementById("canvas");
-var ctx=c.getContext("2d");
-var imageObj1 = new Image();
-var imageObj2 = new Image();
-imageObj1.src = "http://ks.tosti.info/api/files/p4dl5k1456614651832.png";
-imageObj2.src = dURL;
-ctx.drawImage(imageObj2, 0, 0, 328, 526);
-
-	ctx.drawImage(imageObj2, 0, 0, 328, 526);
-      ctx.drawImage(imageObj2, 15, 85, 300, 300);
-      var img = c.toDataURL("image/png");
-      document.write('<img src="' + img + '" width="328" height="526"/>');
-
-}
-	</script>
-	<script type="text/javascript">
-	function save3(dURL){
-
-var img1 = "http://ks.tosti.info/api/files/p4dl5k1456614651832.png";
-var img2 = dURL;
-alert(img2);
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
-
-canvas.width = img1.width;
-canvas.height = img1.height;
-
-context.globalAlpha = 1.0;
-context.drawImage(img1, 0, 0);
-context.globalAlpha = 0.5; //Remove if pngs have alpha
-context.drawImage(img2, 0, 0);
-
-}
-</script>
-<script>var img = canvas.toDataURL("image/png");
-      document.write('<img src="' + img + '" width="328" height="526"/>');
-
-function link2mail(body){
-alert(body);
-document.write('<form  style="background:orange;" method="POST" action="http://ks.tosti.info/canvas/postoffice/sendmail.php"><input type="hidden" name="message" value="' + body + '"/><input type="hidden" name="subject" value="test canvas"/><input type="submit" value="send billede" /></form>');
-
-}
-function sendMail()
-{
-   var mailBody=document.getElementById('canvas').innerHTML;
-   window.location="mailto:tosti@mac.com?subject=hii&body="+mailBody;
-}
-</script>
 </head>
 <body>
 <div id="page">
@@ -302,7 +251,7 @@ function sendMail()
 		<a id="new" class="navbtn" onclick="newCanvas()">New</a>
         <div class="title">Sketch Pad</div>
     </div>
-
+<!--
 <style>
 #content {
     position: relative;
@@ -314,7 +263,7 @@ function sendMail()
     top: 0;
     left: 0;
 }</style>
-
+ -->
     <div id="content" class="content" style="position:relative;">
     	<canvas style="z-index:10;yellow:none;top:0;left:0;margin:0;padding:0;background:url(/assets/images/flora.jpg);background-size: contain;" id="canvas" class="canvas" width="100" height="100"></canvas>
     	<img style="background:url(/assets/images/flora.jpg);z-index:0;position:relative;top:-3000px;left:-3000px;padding:0;margin:0;width:100%" id="respondImage" src="/assets/images/flora.jpg"/>
@@ -358,11 +307,64 @@ function sendMail()
 		</div>
     </div>
 </div>
-  <script src="/respondCanvas-jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='/respondCanvas-jquery.js'>\x3C/script>")</script>
+<script>
+	function save2(dURL){
+
+
+"use strict";var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+var imageObj1 = new Image();
+var imageObj2 = new Image();
+imageObj1.src = "http://ks.tosti.info/api/files/p4dl5k1456614651832.png";
+imageObj2.src = dURL;
+ctx.drawImage(imageObj2, 0, 0, 328, 526);
+
+	ctx.drawImage(imageObj2, 0, 0, 328, 526);
+      ctx.drawImage(imageObj2, 15, 85, 300, 300);
+      var img = c.toDataURL("image/png");
+      document.write('<img src="' + img + '" width="328" height="526"/>');
+
+}
+	</script>
+	<script type="text/javascript">
+	function save3(dURL){
+
+var img1 = "/uploads/files/p4dl5k1456614651832.png";
+var img2 = dURL;
+alert(img2);
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+
+canvas.width = img1.width;
+canvas.height = img1.height;
+
+context.globalAlpha = 1.0;
+context.drawImage(img1, 0, 0);
+//context.globalAlpha = 0.5; //Remove if pngs have alpha
+context.drawImage(img2, 0, 0);
+
+}
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var img = canvas.toDataURL("image/png");
+document.write('<img src="' + img + '" width="328" height="526"/>');
+
+function link2mail(body){
+alert(body);
+document.write('<form  style="background:orange;" method="POST" action="http://ks.tosti.info/canvas/postoffice/sendmail.php"><input type="hidden" name="message" value="' + body + '"/><input type="hidden" name="subject" value="test canvas"/><input type="submit" value="send billede" /></form>');
+
+}
+function sendMail()
+{
+   var mailBody=document.getElementById('canvas').innerHTML;
+   window.location="mailto:tosti@mac.com?subject=hii&body="+mailBody;
+}
+</script>
+  <script src="respondCanvas-jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='respondCanvas-jquery.js'>\x3C/script>")</script>
 <script type="text/javascript">
   	$(document).ready( function(){
-
+		var ctx = canvas.getContext('2d');
   		//Get the canvas & context
   		var c = $('canvas');
   		var ci = $('#canvasimg');
@@ -405,5 +407,8 @@ function sendMail()
 
 
 </script>
+
+
+
 
 </div>
