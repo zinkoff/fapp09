@@ -84,7 +84,7 @@ angular.module('pw.canvas-painter')
         options.height = height || 300;
         //options.width = options.width || 400;
         //options.height = options.height || 300;
-        options.backgroundColor = options.backgroundColor || '#fff';
+        options.backgroundColor = options.backgroundColor || '#f00';
         options.color = options.color || '#f00';
         options.undoEnabled = options.undoEnabled || false;
         options.opacity = options.opacity || 0.9;
@@ -93,20 +93,23 @@ angular.module('pw.canvas-painter')
         options.imageSrc = options.imageSrc || false;
 
 
+
+
+						var img = new Image();
+						img.src = options.imageSrc;
+						console.log(img.width, img.height)
+
+
         // background image
         if (options.imageSrc) {
-          var image = new Image();
-          image.src = options.imageSrc;
-         	options.width = image.width/1.52;
-          options.height = image.height/1.52;
-          image.onload = function() {
-          	//options.width = image.width;
-          	//options.height = image.height;
-            ctx.drawImage(this, 0, 0, options.width, options.height);
-          };
-
-          image.src = options.imageSrc;
-        }
+        		var image = new Image();
+         		image.src = options.imageSrc;
+						image.onload = function() {
+            	ctx.drawImage(this, 0, 0, image.width/1.2, image.height/1.2);
+          	};
+          	options.width = image.width/1.2;
+          	options.height = image.height/1.2;
+      	}
 
         //undo
         if (options.undo) {
