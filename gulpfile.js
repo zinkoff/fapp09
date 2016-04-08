@@ -40,8 +40,9 @@ var paths = {
     'bower_components/angular-animate/angular-animate.js',
     'bower_components/angular-ui-router/release/angular-ui-router.js',
     'bower_components/angular-resource/angular-resource.js',
-	'bower_components/angular-google-maps/dist/angular-google-maps.js',
-	'bower_components/angular-canvas-painter/dist/angular-canvas-painter.js',
+		'bower_components/angular-google-maps/dist/angular-google-maps.js',
+		//'bower_components/angular-canvas-painter/dist/angular-canvas-painter.js',
+		'/bower_components/angular-image-dimensions/dist/angular-image-dimensions.js',
 
     'bower_components/foundation-apps/js/vendor/**/*.js',
     'bower_components/foundation-apps/js/angular/**/*.js',

@@ -1,0 +1,22 @@
+---
+name: angularCanvasPainter2
+url: /angular-canvas-painter2
+---
+
+<a zf-open="canvasModal" class="button">Open modal</a>
+
+<div zf-modal="" id="canvasModal" class="canvas-modal dialog full" style="padding:0;"><a zf-close="" class="close-button">×</a>
+
+
+<!--templates-->
+<div class="pwCanvasPaint" style="position:relative"></div>
+<ul class="pwColorSelector">
+  <li ng-repeat="color in colorList track by $index"
+			class="pwColor"
+			ng-class="{'active': (selectedColor === color)}"
+			ng-style="{'background-color':color}"
+      ng-click="setColor(color)"></li>
+</ul>
+
+
+</div>
