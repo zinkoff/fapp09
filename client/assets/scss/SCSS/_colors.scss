@@ -17,10 +17,7 @@ $tuatara     : #444444;
 $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 /*	colors	*/
 $blue: #01939a;//#00F
 $brown:#963;
@@ -32,7 +29,7 @@ $purple:#800080;
 $red: #ff0000;
 $yellow: #00FFFF;
 $pink: #FFDCFF;
-
+$dark-gray: #222222;
 
 //We use these as default colors throughout
 $primary-color: #008CBA;
@@ -41,10 +38,7 @@ $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
-<<<<<<< Updated upstream
-$dark-gray: #222222;
-=======
->>>>>>> Stashed changes
+
 
 .bg-white{background:$white;}//:#FFFFFF;
 .bg-ghost{background:$ghost;}//:#FAFAFA;
@@ -71,11 +65,7 @@ $dark-gray: #222222;
 .bg-success-color{background:$success-color;}//:#43AC6A;
 .bg-warning-color{background:$warning-color;}//:#f08a24;
 .bg-info-color{background:$info-color;}//:#a0d3e8;
-<<<<<<< Updated upstream
-.bg-dark {background:$dark-gray;}
-=======
 .bg-dark {background:$iron;}
->>>>>>> Stashed changes
 .bg-blue{background:$blue;}
 .bg-brown{background:$brown;}
 .bg-cyan{background:$cyan;}
