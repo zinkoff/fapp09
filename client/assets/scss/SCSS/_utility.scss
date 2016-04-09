@@ -17,8 +17,33 @@ u {text-decoration: underline;}
   min-width: $min-width;
 }
 
+<<<<<<< Updated upstream
 .min-width-300 {min-width:200px;}
 
 /*	min-width	*/
 .mw218 {@include mixin-mw(218px);}
 .mw150 {@include mixin-mw(180px);}
+=======
+.min-width-300 {min-width:300px;}
+
+/*	min-width	*/
+.mw218 {@include mixin-mw(218px);}
+.mw150 {@include mixin-mw(180px);}
+
+//display
+.display-none{display:none;}
+
+//width
+.w100{width:100%;}
+.w75{width:75%;}
+.w66{width:66.66%;}
+.w33{width:33.33%;}
+.w50{width:50%;}
+.w25{width:25%;}
+
+//padding, margin
+.nul{padding:0;margin:0;}
+
+
+
+>>>>>>> Stashed changes
