@@ -95,18 +95,20 @@ angular.module('pw.canvas-painter')
 
         // background image
         if (options.imageSrc) {
-          var image = new Image();
-          image.src = options.imageSrc;
-         	options.width = image.width/1.52;
-          options.height = image.height/1.52;
-          image.onload = function() {
-          	//options.width = image.width;
-          	//options.height = image.height;
-            ctx.drawImage(this, 0, 0, options.width, options.height);
-          };
+          	var image = new Image();
+         		image.src = options.imageSrc;
+						image.onload = function() {
+            	// ctx.drawImage(this, 0, 0, image.width/4, image.height/4);
+            	ctx.drawImage(this, 0, 0, width, height);
+          	};
+          	//options.width = image.width/4;
+          	//options.height = image.height/4;
+      	}
 
-          image.src = options.imageSrc;
-        }
+
+
+
+
 
         //undo
         if (options.undo) {
