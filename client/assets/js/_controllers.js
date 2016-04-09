@@ -4,16 +4,16 @@
 
 
 
-angular.module('application.controllers',[]).controller('MovieListController',function($scope,$state,/*popupService,*/$window,Movie){
+angular.module('application.controllers',[]).controller('MovieListController',function($scope,$state,popupService,$window,Movie){
 
     $scope.movies=Movie.query();
 
     $scope.deleteMovie=function(movie){
-       // if(popupService.showPopup('Really delete this?')){
+        if(popupService.showPopup('Really delete this?')){
             movie.$delete(function(){
                 $window.location.href='';
             });
-        //}
+        }
     }
 
 }).controller('MovieViewController',function($scope,$stateParams,Movie){

@@ -7,12 +7,7 @@ angular.module('application.services',[])
     return $resource('http://movieapp-sitepointdemos.rhcloud.com/api/movies/:id',{id:'@_id'},{
         'update' : { method: 'PUT' },
         'get': { method:'GET', cache: true},
-		'query': { method:'GET', cache: true, isArray:true }/*,
-		get()
-		query()
-		save()
-		remove()
-		delete()*/
+		'query': { method:'GET', cache: true, isArray:true }
     });
 })
 .service('popupService',function($window){
