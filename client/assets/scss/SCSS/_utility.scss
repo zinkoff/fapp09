@@ -1,0 +1,24 @@
+/*	decoration 	*/
+.no-deco { list-style-type: none; }
+.u {text-decoration: underline;}
+u {text-decoration: underline;}
+.nulstil,.nul{padding:0;margin:0;}
+.no-border { border:none;}
+
+/* text */
+.uc { text-transform: uppercase; }
+.baseline { vertical-align: baseline; }
+.sans{font-family:sans-serif;}
+.serif{font-family:serif;}
+
+/* 	mixins  	*/
+
+@mixin mixin-mw($min-width) {
+  min-width: $min-width;
+}
+
+.min-width-300 {min-width:200px;}
+
+/*	min-width	*/
+.mw218 {@include mixin-mw(218px);}
+.mw150 {@include mixin-mw(180px);}
